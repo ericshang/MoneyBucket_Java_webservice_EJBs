@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://WS/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WS/">
+
+<xs:element name="getAllInterestRateList" type="tns:getAllInterestRateList"/>
+
+<xs:element name="getAllInterestRateListResponse" type="tns:getAllInterestRateListResponse"/>
+
+<xs:element name="getBorrowInterestRateByMonth" type="tns:getBorrowInterestRateByMonth"/>
+
+<xs:element name="getBorrowInterestRateByMonthResponse" type="tns:getBorrowInterestRateByMonthResponse"/>
+
+<xs:element name="getBorrowRateList" type="tns:getBorrowRateList"/>
+
+<xs:element name="getBorrowRateListResponse" type="tns:getBorrowRateListResponse"/>
+
+<xs:element name="getSavingInterestRateByMonth" type="tns:getSavingInterestRateByMonth"/>
+
+<xs:element name="getSavingInterestRateByMonthResponse" type="tns:getSavingInterestRateByMonthResponse"/>
+
+<xs:element name="getSavingRateList" type="tns:getSavingRateList"/>
+
+<xs:element name="getSavingRateListResponse" type="tns:getSavingRateListResponse"/>
+
+<xs:complexType name="getSavingRateList">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getSavingRateListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:interestRate" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="interestRate">
+<xs:sequence>
+<xs:element name="iid" type="xs:int"/>
+<xs:element name="month" type="xs:int"/>
+<xs:element name="rate" type="xs:double"/>
+<xs:element name="type" type="tns:rateType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBorrowRateList">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getBorrowRateListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:interestRate" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBorrowInterestRateByMonth">
+<xs:sequence>
+<xs:element name="month" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBorrowInterestRateByMonthResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:interestRate" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSavingInterestRateByMonth">
+<xs:sequence>
+<xs:element name="month" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSavingInterestRateByMonthResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:interestRate" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllInterestRateList">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllInterestRateListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:interestRate" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="rateType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="BORROW"/>
+<xs:enumeration value="SAVING"/>
+<xs:enumeration value="ALL"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

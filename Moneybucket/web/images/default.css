@@ -1,0 +1,281 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-color:#FFFFFF;
+	font-size:14px;
+	font-family:"Times New Roman", Times, serif;
+	margin:0;
+	padding:0;
+	line-height:1.2em;
+}
+img{
+	border:0;
+}
+a{
+	color:#0033FF;
+	text-decoration:none;
+}
+a:hover{
+	color: #0066FF;
+}
+
+input, textarea{
+	margin:0;
+	padding:0.3em 0.4em;
+}
+.header{
+	text-align:left;
+	height:50px;
+	position:relative;
+}
+.headerNavUl,mainUl{
+	padding:0;
+	margin:2px 5px;
+}
+.headerNavUl li{
+	list-style:none;
+	display:inline-block;
+	margin:0;
+	padding:0.2em 0.4em;
+	border:1px solid #FFFFFF;
+	border-radius:4px;
+	
+}
+.headerNavUl li:hover{
+	background-color: #FFE68C;
+}
+
+.mainUl li{
+	list-style:none;
+	display:block;
+	margin:0;
+	padding:0.2em 0.4em;
+	border:1px solid #FFFFFF;
+	border-radius:4px;
+	font-size:18px;
+	color: #999999;
+}
+
+.mainUl li>span{
+	font-weight:bold;
+	color: #D90000;
+	display:block;
+	margin:5px 0px;
+	border:1px solid #FFFFFF;
+	border-radius:4px;
+}
+.mainUl li>span:hover{
+	color:#FF0000;
+}
+
+.mainBox{
+	padding:0;
+	margin:0 auto;
+	width:90%;
+	position:relative;
+}
+.clear{
+	clear:both;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:600;
+	padding:0.2em 0;
+	margin:0em;
+}
+h1{
+	font-size:36px;
+}
+h2{
+	font-size:24px;
+}
+h3{
+	font-size: 18px;
+}
+h4{
+	font-size: 16px;
+}
+h5{
+	font-size: 14px;
+}
+input{
+	border:1px solid #CCCCCC;
+	border-radius:4px;
+	width:260px;
+}
+.inputAddressNumbers{
+	width:50px;
+}
+.inputSubmit{
+	width:100px;
+	font-weight:bold;
+}
+
+#mainBox{
+	min-height:500px;
+	margin:10px auto;
+	z-index:100;
+	position:relative;
+}
+.popBox{
+	border:10px solid #666666;
+	border-radius: 6px;
+	padding:0;
+	min-width:400px;
+	position:absolute;
+	top:10%;
+	left:20%;
+	box-shadow: 0 0px 20px #666666;
+	visibility:hidden;
+	height:0;
+	overflow:hidden;
+	z-index:200;
+}
+.popBoxHeader{
+	border:0;
+	padding:8px 0;
+	margin:0;
+	position:relative;
+	background-color:#f0f0f0;
+	background-image:url(popUpHeaderBg.png);
+	background-position:top center;
+	background-repeat:repeat-x;
+}
+.popBoxLeft{
+	margin:0 30px;
+}
+.popBoxRight{
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+.popBoxBtmRight{
+	margin:5px 30px;
+	position:relative;
+	text-align:right;
+}
+
+
+.popBoxBody{
+	border:0;
+	padding:8px 0;
+	margin:0;
+	position:relative;
+	background-color:#FFFFFF;
+}
+
+.popBoxBtm{
+	border:0;
+	padding:8px 0;
+	margin:0;
+	position:relative;
+	background-color:#FFFFFF;
+}
+
+
+.mainLeft{
+	border:1px solid #CCCCCC;
+	border-radius:6px;
+	min-height:500px;
+	margin:10px auto;
+	float:left;
+	/*CSS3*/
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	width:50%;
+	z-index:101;
+}
+.mainRight{
+	border:1px solid #CCCCCC;
+	border-radius:6px;
+	min-height:500px;
+	margin:10px auto;
+	
+	float:right;
+	/*CSS3*/
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	width:45%;
+	z-index:101;
+}
+
+.mainTxtBox{
+	padding:100px;
+	text-align:center;
+}
+.mainTxtBoxAdm{
+	padding:10px;
+	text-align:center;
+}
+.requestList{
+	margin:20px 0;
+}
+.requestListTable{
+	width:100%;
+	margin:10px;
+}
+.requestListTable td{
+	padding:0.4em 0.6em;
+}
+.requestListTable tr:hover{
+	background-color:#e0e0e0;
+}
+
+.tableHeader{
+	background-color:#CCCCCC;
+	font-weight:bold;
+}
+
+.footer{
+	margin:0;
+	padding:2em;
+	text-align:center;
+	z-index:101;
+}
+
+/*******
+Generics
+********/
+.articleListTable{
+	border:1px solid #f0f0f0;
+	border-radius:6px;
+	margin:0.5em;
+	padding:2px;
+	width:80%;
+}
+.articleListTable td{
+	margin:0;
+	padding:0.4em 0.6em;
+	border:0;
+	text-align:right;
+}
+.trGray{
+	background-color:#f0f0f0;
+}
+.trHeader{
+	background-color:#e0e0e0;
+	font-weight:bold;
+}
+.tdAmount{
+	text-align:right;
+	width:30%;
+}
+.tdNote{
+	width:50%;
+}
+.trFooter{
+	background-color:#e0e0e0;
+	font-weight:bold;
+}
+.articleListTable tr:hover{
+	background-color:#f0f0f0;
+}
+.divLoginBox{
+	height:25px;
+	width:100%;
+	position:relative;
+	padding:5px 0;
+	text-align:right;
+}
